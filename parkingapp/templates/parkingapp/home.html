@@ -1,0 +1,137 @@
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures the video stays behind content */
+    overflow: hidden;
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Adjusted min-height to fill the viewport */
+    padding-top: 50px; /* Added padding to center content vertically */
+}
+
+.card {
+    width: 400px; /* Adjusted width */
+    height: 200px; /* Adjusted height */
+    margin: 20px; /* Increased margin for spacing */
+    background-color: rgba(0, 0, 0, 0.5
+); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for card */
+    transition: transform 0.3s ease-in-out; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Move card up on hover */
+}
+
+.card-body {
+    height: 100%; /* Ensures the card body fills the card height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* Text color */
+}
+
+.card-text {
+    font-size: 16px;
+    color: #eae7e7da; /* Text color */
+}
+
+.top-right {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.page-heading {
+    text-align: center;
+    margin-top: 30px; /* Adjust top margin as needed */
+    color: #fff; /* Heading text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+}
+
+    </style>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="{% static 'videos/veh1.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+
+    <div class="top-right">
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Logout</button>
+        </form>
+    </div>
+
+    <div class="container card-container">
+        <div class="card">
+            <a href="{% url 'spot_list' 'bike' %}" class="card-link">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                   <p class="card-text">BIKE PARKING.</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="{% url 'spot_list' 'car' %}" class="card-link">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">CAR PARKING SLOT.</p>
+                </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="{% url 'spot_list' 'ev_car' %}"class="card-link">
+                <div class="card-body">
+                    <h5 class="card-title"></h5>
+                    <p class="card-text">CAR PARKING SLOT (EV).</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

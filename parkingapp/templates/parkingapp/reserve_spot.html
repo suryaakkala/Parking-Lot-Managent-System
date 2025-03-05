@@ -1,0 +1,99 @@
+{% load static %}
+<html>
+<head>
+    <title>Reserve Spot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            background: url('{% static "images/reserve_spot.jpg" %}') no-repeat center center fixed;
+            background-size: cover;
+            color: #343a40;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #d4dffd;
+        }
+
+        .container {
+            background-color: #0000007c;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            margin: 10px 0;
+            padding: 10px;
+            width: calc(100% - 22px);
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .logout {
+            margin-bottom: 20px;
+        }
+
+        .logout button {
+            background-color: #dc3545;
+        }
+
+        .logout button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reserve Spot {{ spot.spot_number }}</h1>
+        <div class="logout">
+            <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit">Logout</button>
+            </form>
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            <label for="hours">Duration (hours):</label>
+            <input type="number" id="hours" name="hours" min="0" required>
+            <label for="minutes">Duration (minutes):</label>
+            <input type="number" id="minutes" name="minutes" min="0" max="59" required>
+            <button type="submit">Reserve</button>
+        </form>
+    </div>
+</body>
+</html>
