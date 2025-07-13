@@ -99,7 +99,7 @@ Led by **Surya Akkala**, with contributions from the following team members:
 |------------------|----------------------------------------|-------------------|
 | **A. Hari Kailash** | [@harianchala](https://github.com/harianchala) | Frontend Developer |
 | **G. Karuna Sri** | [@Karunasri921](https://github.com/Karunasri921) | Frontend Developer |
-| **K. Sathvik**    | [@Sathvik](https://github.com/sathvik) | Backend Developer |
+| **K. Sathvik**    | [@Sathvik0912](https://github.com/Sathvik0912) | Backend Developer |
 | **K. Sruthi** | [@Sruthi-3-0](https://github.com/Sruthi-3-0) | Frontend Developer |
 | **P. Rishitha** | [@2200032932](https://github.com/2200032932) | Frontend Developer |
 | **Surya Akkala** | [@suryaakkala](https://github.com/suryaakkala) | Team Lead / Backend |
