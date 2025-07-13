@@ -92,7 +92,19 @@ Use the superuser you created or register via the login page.
 ## 🏢 Internship Acknowledgment
 Built during the **Technical Internship** at **Vehinova**.
 
-## 🧑‍💻 Author
-**Surya Akkala**  
-GitHub: [@your-username](https://github.com/your-username)  
-Email: your-email@example.com
+## 🧑‍💻 Team
+This project was developed as part of a collaborative team effort under the **Vehinova Technical Internship**.
+Led by **Surya Akkala**, with contributions from the following team members:
+| Name             | GitHub                                 | Role              |
+|------------------|----------------------------------------|-------------------|
+| **A. Hari Kailash** | [@harianchala](https://github.com/harianchala) | Frontend Developer |
+| **G. Karuna Sri** | [@Karunasri921](https://github.com/Karunasri921) | Frontend Developer |
+| **K. Sathvik**    | [@Sathvik](https://github.com/sathvik) | Backend Developer |
+| **K. Sruthi** | [@Sruthi-3-0](https://github.com/Sruthi-3-0) | Frontend Developer |
+| **P. Rishitha** | [@2200032932](https://github.com/2200032932) | Frontend Developer |
+| **Surya Akkala** | [@suryaakkala](https://github.com/suryaakkala) | Team Lead / Backend |
+| **Y. Ravi Kumar** | [@yarrapothuravi](https://github.com/yarrapothuravi) | Frontend Developer |
+
+
+## 📜 License
+This project is for educational/demo purposes only.
